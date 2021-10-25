@@ -61,4 +61,25 @@ Lesson 11, Middleware
 1. Middleware is the suggested way to extend Redux with custom functionalities
 2. Provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
 3. Use middleware for logging, crash reporting, performing asynchronous tasks etc.
+----------------------------------------------------------------------------------------------------
 
+Lesson 12, Async Actions
+
+1. Synchronous Actions
+* as soon as an action was dispatched, the state was immediately updated.
+* if you dispatch the BUY_CAKE action, the numOfCakes was right away decremented by 1.
+* Same with BUY_ICECREAM action as well.
+
+2. Async Actions
+* Asynchronous API calls to fetch data from an end point and use that data in your application.
+----------------------------------------------
+Async Action Creators
+
+axios, requests to an API end point
+redux-thunk, is a middleware to define async action creators
+
+-----------------------------------------------------------------------------------------------------
+
+Lesson 13, Redux Thunk middleware for Async Actions
+
+So far redux is for all JavaScript applications, not neccesarily for React.
