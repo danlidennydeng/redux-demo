@@ -1,4 +1,5 @@
-Three Principles
+
+Lesson 4, Three Principles
 
 1. The state of your whole application is stored in an object tree within a single store.
 
@@ -25,3 +26,31 @@ const reducer = (state, action) => {
     }
   }
 }
+
+-------------------------------------------------------------------------------------------
+
+Lesson 5, Actions
+
+* the only way your application can interact with the store
+* carry some information from your app to redux store
+* Plain JavaScript objects
+* Have a 'type' property that indicates the type of action being performed
+* The 'type' property is typically defined as string constants
+
+------------------------------------------------------------------------------------------
+
+Lesson 6, Reducers
+
+* specify how the app's state changes in response to actions sent to the store
+* function that accepts state and action as arguements, and returns the next state of the application
+----------------------------------------------------------------------------------------------------
+
+Lesson 7, Redux Store
+
+One store for the entire application
+* holds application state
+* allows access to state via getState()
+* allows state to be updated via dispatch(action)
+* registers listeners via subscribe(listener)
+* handles unregistering of listeners via the function returned by subscribe(listener)
+
