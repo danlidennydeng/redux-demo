@@ -1,0 +1,27 @@
+Three Principles
+
+1. The state of your whole application is stored in an object tree within a single store.
+
+* maintain our application state in a single object which would be managed by the Redux store.
+
+* Cake Shop - Let's assume we are trucking the number of cakes on the shelf {numberOfCakes: 10}
+
+2. The only way to change the state is to emit an action, an object describing what happened.
+
+* to update the state of your app, you need to let Redux know about that with an action.
+* not allowed to directly update the state object.
+
+* Cake Shop - Let the shopkeeper know about our action {type: BUY_CAKE}
+
+3. To specify how the state tree is transformed by action, you write pure reducers
+
+* reducer -(previousState, action) => newState
+
+* Cake Shop - Reducer is the shopkeeper.
+const reducer = (state, action) => {
+  switch (action.type) {
+    case BUY_CAKE: return {
+      numOfCakes: state.numOfCakes - 1
+    }
+  }
+}
